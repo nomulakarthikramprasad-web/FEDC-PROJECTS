@@ -1,45 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Student Attendance System</title>
+<meta charset="UTF-8">
+<title>Employee Dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-<h1>Student Attendance System</h1>
-<!-- Form Section -->
-<div class="form">
-<input type="number" id="id" placeholder="Student ID">
-<input type="text" id="name" placeholder="Student Name">
-<select id="status">
-<option value="true">Present</option>
-<option value="false">Absent</option>
-</select>
+<h1 class="title">Employee Performance Dashboard</h1>
 <div class="btn-group">
-<button onclick="addStudent()">Add</button>
-<button onclick="updateStudent()">Update</button>
+<button onclick="addEmployee()"> Add Employee</button>
+<button onclick="updateScore()">⬆ Update Score</button>
+<button onclick="downloadPDF()"> Download PDF</button>
 </div>
+<div id="app"></div>
 </div>
-<!-- DOM vs VDOM Buttons -->
-<div class="btn-group">
-<button onclick="updateDOM()">Update Using DOM</button>
-<button onclick="updateVDOM()">Update Using VDOM</button>
-</div>
-<!-- Table Section -->
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Attendance</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody id="tableBody">
-<!-- Data comes from script.js -->
-</tbody>
-</table>
-</div>
-</div>
-<script src="script.js"></script>
+<script type="module" src="app.js"></script>
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- AutoTable plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdfautotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</body>
+</html>
